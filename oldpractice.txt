@@ -1,0 +1,59 @@
+// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
+static int findLargestNthNumber(int[] arr , int n){
+
+    if(arr.Length <n){
+        return 0;
+    }
+// sort the array in ascending order
+    // for(int i=0;i<=arr.Length-1;i++){
+    // for(int j=0;j<=arr.Length-1;j++){
+    //  if(arr[j]> arr[i]){
+    //     int a=arr[i];
+    //     arr[i]=arr[j];
+    //      arr[j]=a;
+    // }
+    // }
+    // find the arr index of nth number
+
+    int nth = arr.Length -n;
+     int largestVal=arr[n-1];
+
+    //  int nthlargestVal=0;
+   
+    //  for(int i=0;i<n-1;i++){
+    //     if(arr[i] < largestVal && i==n-1)
+    //     {
+    //        nthlargestVal=arr[i];
+    //     }
+    //  }
+  
+    
+
+    return largestVal;
+
+}
+int[] arr ={4,5,3,6,1};
+// for(int i=0;i<=arr.Length-1;i++){
+//     for(int j=0;j<=arr.Length-1;j++){
+//      if(arr[j]> arr[i]){
+//         int a=arr[i];
+//         arr[i]=arr[j];
+//          arr[j]=a;
+//     }
+//     }
+//  }
+
+Array.Sort(arr);
+Array.Reverse(arr);
+ int result =findLargestNthNumber(arr,2);
+
+ Console.WriteLine("Largest 3rd value is: {0}",result);
+
+
+ for(int i=0;i<=arr.Length -1;i++){
+    Console.WriteLine(arr[i]);
+ }
+
+  
+ 
